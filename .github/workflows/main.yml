@@ -4,35 +4,24 @@ on:
      - main
 name: 🚀 Deploy website on push
 jobs:
- web-deploy:
-   name: 🎉 Deploy
-   runs-on: ubuntu-latest
-   steps:
-   - name: 🚚 Get the latest code
-     uses: actions/checkout@v2.3.4
-  
-   - name: 📂 SFTP Deploy
-     id: upload
-     uses: Creepios/sftp-action@v1.0.3
-     with:
-       host: ${{ secrets.FTP_HOST }}
-       username: ${{ secrets.FTP_USERNAME }}
-       password: ${{ secrets.FTP_PASSWORD }}
-       localPath: './'
-       remotePath: '/var/www/html'
-
-    #   ... INSTALL / RESTORE / BUILD ...  
-
-    - name: Clean ReactJS precache-manifest and logs
+ release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: SFTP Deploy
+      uses: Creepios/sftp-action@v1.0.3
+      with:
+        host: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localPath: './'
+        remotePath: '/var/www/html' 
+    - name: Delete files
       uses: StephanThierry/ftp-delete-action@/v2.1
       with:
         host: ${{ secrets.FTP_HOST }}
-        user: ${{ secrets.FTP_USERNAME }}
+        username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        remoteFiles: 'precache-manifest.*.js;logs/*.log'
-        remoteDirectories: '/var/www/html'
-        workingDir: './'
-        ignoreSSL: '1'
-
-    #   ... THE REST OF YOUR DEPLOYMENT ...  
-      
+        localPath: './'
+        remotePath: '/var/www/html'
+  
