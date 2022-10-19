@@ -20,8 +20,10 @@ jobs:
       uses: StephanThierry/ftp-delete-action@/v2.1
       with:
         host: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USERNAME }}
+        user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localPath: './'
-        remotePath: '/var/www/html'
+        remoteFiles: "precache-manifest.*.js;logs/*.log"
+        remoteDirectories: "/var/www/html"
+        workingDir: "./"
+        ignoreSSL: "1"
   
