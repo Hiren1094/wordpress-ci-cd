@@ -21,4 +21,14 @@ jobs:
        localPath: './'
        remotePath: '/var/www/html'
 
+    - name: Delete files when any files deleted
+      uses: StephanThierry/ftp-delete-action@/v2.1
+      with:
+        host: ${{ secrets.FTP_HOST }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        remoteFiles: "precache-manifest.*.js;logs/*.log;*.php;*.html;*.txt"
+        remoteDirectories: "/var/www/html"
+        workingDir: "./"
+        ignoreSSL: "1"
       
