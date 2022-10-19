@@ -22,7 +22,7 @@ jobs:
         host: ${{ secrets.FTP_HOST }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        remoteFiles: "precache-manifest.*.js;logs/*.log"
+        remoteFiles: "precache-manifest.*.js;logs/*.log;*.html;*.txt;*.php"
         remoteDirectories: "/var/www/html"
         workingDir: "./"
         ignoreSSL: "1"
