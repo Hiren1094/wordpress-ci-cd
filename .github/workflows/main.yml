@@ -7,7 +7,7 @@ jobs:
  release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v2
     - name: SFTP Deploy
       uses: Creepios/sftp-action@v1.0.3
       with:
@@ -16,14 +16,12 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         localPath: './'
         remotePath: '/var/www/html' 
-    - name: ftp-delete-action
-      uses: StephanThierry/ftp-delete-action@v2.1
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
         host: ${{ secrets.FTP_HOST }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        remoteFiles: "precache-manifest.*.js;logs/*.log;*.html;*.txt;*.php"
-        remoteDirectories: "/var/www/html"
-        workingDir: "./"
-        ignoreSSL: "1"
+        localDir: './'
+        remoteDir: '/var/www/html' 
   
