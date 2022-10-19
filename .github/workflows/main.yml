@@ -16,8 +16,8 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         localPath: './'
         remotePath: '/var/www/html' 
-    - name: Delete files
-      uses: StephanThierry/ftp-delete-action@/v2.1
+    - name: ftp-delete-action
+      uses: StephanThierry/ftp-delete-action@v2.1
       with:
         host: ${{ secrets.FTP_HOST }}
         user: ${{ secrets.FTP_USERNAME }}
