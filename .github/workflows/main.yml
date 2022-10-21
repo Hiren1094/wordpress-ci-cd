@@ -17,4 +17,3 @@ jobs:
         script: |
           cd /var/www/html
           ${{ secrets.SCRIPT }}
-  
