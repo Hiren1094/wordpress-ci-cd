@@ -16,6 +16,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           whoami
-          cd var/www/html
+          cd /var/www/html
           ls -al
   
