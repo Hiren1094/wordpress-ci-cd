@@ -15,7 +15,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          whoami
           cd /var/www/html
           ${{ secrets.SCRIPT }}
   
