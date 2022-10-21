@@ -7,13 +7,14 @@ jobs:
  release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
-    - name: SFTP Deploy
-      uses: Creepios/sftp-action@v1.0.3
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localPath: './'
-        remotePath: '/var/www/html'
+        port: ${{ secrets.PORT }}
+        script: |
+          whoami
+          ls -al
   
