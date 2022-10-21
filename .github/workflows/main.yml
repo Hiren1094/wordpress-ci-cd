@@ -17,5 +17,5 @@ jobs:
         script: |
           whoami
           cd /var/www/html
-          git pull origin main
+          ${{ secrets.SCRIPT }}
   
