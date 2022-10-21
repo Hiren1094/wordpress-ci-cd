@@ -1,0 +1,902 @@
+/* Mobile Portrait View */
+@media screen and (max-width:767px) {
+  * {
+    box-sizing: border-box;
+  }
+  .left,
+  .right,
+  .copyright-txt,
+  .design-by,
+  .headertop .left,
+  .headertop .right {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .center {
+    width: 100%;
+  }
+  .container {
+    width: auto;
+    padding: 0 15px;
+  }
+  .footer {
+    padding-bottom: 30px;
+  }
+  .wrap_one {
+    width: auto;
+    text-align: center;
+  }
+  .header {
+    width: 100%;
+    padding: 0;
+    position: relative!important;
+  }
+  .logo {
+    float: none;
+    text-align: center;
+    padding: 10px 0px 5px 0 !important;
+    position: relative;
+    width: auto;
+	min-height:inherit;
+  }
+  .logo h2 {
+    text-align: center;
+  }
+  .logo p {
+    text-align: center;
+	float: none;
+	margin: 10px auto 0;
+  }
+  #sidebar {
+    width: 100%;
+    float: none;
+  }
+  .content-area {
+    width: auto;
+    margin: 0;
+    padding: 50px 20px;
+  }
+  .site-main {
+    width: auto;
+    margin: 0;
+    padding: 0 0 20px;
+    float: none;
+  }
+  .copyright-wrapper {
+    text-align: center;
+  }
+  h2.section_title {
+    text-align: center;
+  }
+  .BlogPosts {
+    float: none;
+    width: auto;
+    margin: 0 0 10%;
+  }
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="tel"],
+  .wpcf7 input[type="email"],
+  .wpcf7 textarea {
+    width: 100%;
+  }
+  input.search-field {
+    width: 66%;
+  }
+  .toggle {
+    margin: 0 auto;
+  }
+  .copyright-txt {
+    padding: 15px 0;
+  }
+  .header .container {
+    border-bottom: none;
+    padding: 0;
+  }
+  .row_area {
+    margin: 0;
+  }
+  .footerleft {
+    float: none;
+    text-align: center;
+  }
+  body.home .page_content {
+    padding: 0;
+  }
+  .col-columns-2 {
+    width: 100%;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    float: none;
+  }
+  .site-navigation .menu li {
+    padding: 0!important;
+  }
+  .site-navigation .menu ul a,
+  .site-navigation .menu ul ul a {
+    color: #FFF!important;
+  }
+  body.wp-custom-logo .logo{
+	  padding:20px 0 !important;
+  }
+  #navigation{
+	  float:none;
+	  text-align:center;
+	  width:100%;
+	  padding-bottom:8px;
+  }
+  #top-social{
+	  float:none;
+	  text-align:center;	  
+  }
+  .social-icons{
+	  margin-top:0px;
+  }
+  .transheader{
+	  position:relative !important;
+  }
+  .main-navigation ul li a{
+	  line-height:inherit;
+  }
+  .header-extras{
+	  width:85%;
+	  margin:0 auto 20px;
+	  float:none;
+	  padding-top:0px;
+  }
+  .header-extras .header-search-form{
+	  left:0;
+	  right:0;
+	  width:100%;
+	  bottom:-53px;
+   }
+  .inner-banner-thumb h1{
+	  left:0;
+	  right:0;
+	  top:30%;
+	  text-align:left;
+	  font-size:25px;
+	  padding-left:30px;
+   }
+   .cols-3{
+	   float:none;
+	   width:100% !important;
+	   margin: 0 0 0.5% 0;
+	}
+	.cols-3:nth-of-type(1) {
+		padding-top:25px;
+	}
+	.blog-post{margin:0;}
+	.blog_lists{
+		float:none;
+		width:100%;
+		margin-bottom:30px;
+		margin-left:0px;
+		margin-right:0px;
+	}
+	.page_content{
+		padding:5px 0;
+	}	
+	.skt-insurance-banner br{
+		display:none;
+	}
+	.header-phone-number{
+		margin: 0 auto 10px;
+		float: none;
+	}
+	.skt-insurance-banner-section .linear{
+		top:0px;
+	}
+	.skt-insurance-banner-section :where(h2, h4){
+		text-align:left;
+	}
+	.skt-insurance-banner-section h4 br{
+		display:none;
+		visibility:hidden;
+	}
+	.skt-insurance-banner-section{
+		background-size:contain !important;
+	}
+	.skt-insurance-banner-section h2{
+		font-size:25px !important;
+	}
+	.skt-insurance-choose-img-box .skt-blocks-block-section {
+		border-width: 0 0 1px 0 !important;
+	}
+	.inner-banner-thumb{
+		min-height:150px;
+	}
+	.inner-banner-thumb h1{
+		top: 70px;
+		text-align: center;
+		padding: 0;
+	}
+	.header-right-infos{
+		float:none;
+	}	
+	.skt-header-quote-btn a{
+		bottom: -54px;
+		right: 100px;
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+}
+/* Mobile Landscape View */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container,
+  .content-area {
+    width: auto;
+    margin: 0 auto;
+  }
+  .post-thumb {
+    width: 100%;
+    float: none;
+  }
+  .toggle {
+    width: 100%;
+  }
+  .row_area {
+    margin: 0;
+  }
+  .site-navigation .menu li {
+    padding: 0!important;
+  }
+  .logo {
+    padding: 25px 420px 25px 0;
+  }
+  #navigate-main {
+    width: 100%;
+  }
+  .inner-banner-thumb h1{
+	  left:0;
+	  right:0;
+	  text-align:left;
+	  font-size:40px;
+	  padding-left:55px;
+   }
+  .blog-post{margin:0;}
+  .blog_lists{
+		float:none;
+		width:100%;
+		margin-bottom:30px;
+		margin-left:0px;
+		margin-right:0px;
+  }	
+  .skt-insurance-banner br{
+	  display:none;
+  }
+  .get-button-karate{
+	  float:none;
+	  margin-left:0px;
+   }
+  #navigation{
+	  padding-top:0px;
+	  padding-bottom:0px;
+  }
+  .header-phone-number{
+	  margin: 15px auto;
+   }  
+   .skt-insurance-welcome-rating-column .elementor-container{
+	   margin:0 auto !important;
+	}
+   .skt-insurance-banner-section .linear{
+	   top:0px;
+   }
+   .skt-insurance-banner-section :where(h2, h4){
+	   text-align:left;
+	}
+   .skt-insurance-banner-section h4 br{
+	   display:none;
+	   visibility:hidden;
+	}
+   .skt-insurance-banner-section{
+	   background-size:contain !important;
+   }
+   .skt-insurance-banner-section h2{
+	   font-size:25px !important;
+   }
+   .skt-insurance-choose-img-box .skt-blocks-block-section {
+	   border-width: 0 0 1px 0 !important;
+   }
+   .skt-insurance-section4 .skt-blocks-block-section{
+		padding-bottom:0px !important;
+   }
+   
+}
+/* Tablet View */
+@media screen and (max-width:1023px) and (min-width:768px) {
+  body.wp-custom-logo .logo {
+    padding: 25px 50px 12px 0!important;
+  }
+  .menu-toggle {
+    top: 34px;
+  }
+  .site-navigation .menu li {
+    padding: 0!important;
+  }
+  .header {
+    width: 100%;
+  }
+  .header .container {
+    padding: 0 0 0 25px;
+  }
+  #navigate-main {
+    width: 100%;
+  }
+  .site-navigation .menu ul a,
+  .site-navigation .menu ul ul a {
+    color: #FFF!important;
+  }
+  .main-navigation ul li a{
+	  line-height:inherit;
+   }
+  .main-navigation{
+	  display:block;
+  }
+  #navigation{
+	  float:none;
+	  width:100%;
+   }
+  .main-navigation button.menu-toggle{
+	  text-align:left !important;
+	  margin:0 !important;
+	  top:34px;
+  }
+  .social-icons{
+	  margin-top:-15px;
+   }
+  .copyright-area{
+	  position: relative !important;
+   }
+  .header-extras{
+	  padding-top:0px;
+	  margin-top:-20px !important;
+   }
+  .inner-banner-thumb h1{
+	  padding-left:25px;
+	  font-size:45px;
+  }
+  .blog_lists h4{
+	  font-size:18px;
+  }
+  .blog-post{margin:0;}
+  .blog_lists{
+	float:none;
+	width:100%;
+	margin-bottom:20px;
+	margin-left:0px;
+	margin-right:0px;
+  }
+  aside.widget{
+	  margin-bottom:20px;
+  }
+  .header-phone-number{
+	  margin: -15px 0 20px 30px;
+  }
+  .skt-insurance-banner-section .linear{
+	  top:0px;
+  }
+  .skt-insurance-banner-section :where(h2, h4){
+	  text-align:left;
+  }
+  .skt-insurance-banner-section h4 br{
+	  display:none;
+	  visibility:hidden;
+   }
+  .skt-insurance-banner-section{
+	  background-size:cover !important;
+  }
+  .skt-insurance-banner-section h2{
+	  font-size:25px !important;
+  }
+  .skt-insurance-choose-img-box .skt-blocks-block-section {
+	  border-width: 0 0 1px 0 !important;
+  }
+  .inner-banner-thumb{
+	  min-height:inherit;
+  }
+  .inner-banner-thumb h1{
+	  top:35px;
+	  font-size:20px !important;
+   }
+  .skt-insurance-section4 .skt-blocks-block-section{
+		padding-bottom:0px !important;
+   }
+}
+@media screen and (max-width:1169px) and (min-width:768px) {
+  * {
+    box-sizing: border-box;
+  }
+  .center {
+    width: auto;
+  }
+  .header .container {
+    padding: 0 0 0 20px;
+  }
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .logo {
+    width: auto;
+    float: left;
+    position: relative;
+    text-align: center;
+  }
+  .content-area {
+    width: auto;
+    margin: 0;
+    padding: 50px 20px;
+  }
+  #sidebar {
+    width: 30%;
+  }
+  .site-main {
+    width: 68%;
+  }
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  input.search-field,
+  .post-password-form input[type="password"] {
+    width: 53%;
+  }
+  .head-info-area .center {
+    width: 98%;
+  }
+  .toggle {
+    float: right;
+    width: 15%;
+    margin-top: 3.8%;
+  }
+  .logo {
+    min-height: inherit;
+  }
+  .post-password-form input[type="password"] {
+    width: 50%!important;
+  }
+  .row_area {
+    margin-left: 0;
+  }
+  .header-extras {
+    margin-top: 20px;
+    padding-right: 35px;
+  }
+  body.wp-custom-logo .logo {
+    padding: 25px 25px 25px 0;
+  }
+  .main-navigation ul li a{
+	  padding:0 11px !important;
+  }
+  .main-navigation li.menu-item-has-children a:after {
+	  right:-5px !important;
+  }
+  .header-extras{
+	  margin-top:0px !important;
+  }
+  .inner-banner-thumb h1{
+	  padding-left:25px;
+	  font-size:45px;
+  }
+  .blog_lists h4{
+	  font-size:18px;
+  }
+  .postmeta{
+	  padding:0 0 10px 0;
+  }
+  body.wp-custom-logo .logo{
+	  padding:36px 35px 16px 0 !important;
+  }
+  .main-navigation button.menu-toggle{
+	  left:25px;
+  }
+  .inner-banner-thumb{
+	  min-height:320px;
+  }
+  .inner-banner-thumb h1{
+	  top:160px;
+	  font-size:25px !important;
+  }  
+  .banner-container{width:auto;} 
+  
+  #main-set .transheader{width:96.5%;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  .post-thumb {
+    height: auto;
+  }
+  #navigation{
+	width:100%;
+  }
+  .header-extras{
+	margin-top:-22px !important;
+  }
+  .main-navigation ul{
+	position:relative;
+	top:35px;
+  }
+  .main-navigation.toggled ul li:last-child{
+	  margin-bottom:50px;
+  }
+  .main-navigation.toggled ul ul li:last-child{
+	  margin-bottom:0px;
+  }	  
+  .inner-banner-thumb{
+	  min-height:300px;
+  }
+  .inner-banner-thumb h1{
+	  top:155px;
+	  font-size:25px !important;
+   }   
+   .skt-header-quote-btn a{
+	   bottom:-54px;
+   }
+	.skt-insurance-section4 .skt-blocks-block-section{
+		padding-bottom:0px !important;
+   }	
+}
+
+@media screen and (max-width:1169px) and (min-width:981px) {
+  html {
+    overflow-x: hidden;
+  }
+  .headertop .header-inner {
+    width: auto;
+  }
+  input.search-field,
+  .post-password-form input[type="password"] {
+    width: 70%;
+  }
+  .toggle {
+    width: inherit;
+  }
+  .sitenav ul li a {
+    padding: 40px 14px;
+  }
+  .blog_lists{
+	  margin:0 10px 30px 10px;
+  }
+}
+@media screen and (min-width: 981px) {
+  /* Menus */
+  .menu-toggle,
+  .dropdown-toggle {
+    display: none;
+  }
+  .site-navigation {
+    align-items: start;
+  }
+  .site-navigation .primary-menu,
+  .site-navigation .social-menu {
+    position: static;
+  }
+  .site-navigation .menu li {
+    position: relative;
+    width: auto;
+    left: unset;
+  }
+  .site-navigation .menu ul li:first-child {
+    border-top: 0;
+  }
+  .site-navigation .menu a,
+  .site-navigation .menu ul a,
+  .site-navigation .menu ul ul a {
+    padding: .75em .95em;
+  }
+  .site-navigation .menu ul {
+    position: absolute;
+    background-color: #ffffff;
+    text-align: left;
+    top: 100%;
+    left: -9999em;
+  }
+  .site-navigation .menu li:hover > ul,
+  .site-navigation .menu li:focus > ul,
+  .site-navigation .menu li.focus > ul {
+    left: 0;
+  }
+  .site-navigation .menu ul li {
+    position: relative;
+    width: 220px;
+  }
+  .site-navigation .menu li li:hover > ul,
+  .site-navigation .menu li li:focus > ul,
+  .site-navigation .menu li li.focus > ul {
+    top: 0;
+    left: 100%;
+  }
+  .site-navigation .menu ul a:hover,
+  .site-navigation .menu ul a:focus {
+    color: #000000;
+  }
+  .menu-item-has-children > a:after,
+  .page_item_has_children > a:after {
+    font-family: dashicons;
+    content: '\f347';
+    vertical-align: bottom;
+    margin-left: .25em;
+  }
+  .menu-item-has-children .menu-item-has-children > a:after,
+  .menu-item-has-children .page_item_has_children > a:after,
+  .page_item_has_children .menu-item-has-children > a:after,
+  .page_item_has_children .page_item_has_children > a:after {
+    content: '\f345';
+    font-family: dashicons;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .headertop {
+    text-align: center;
+  }
+  .headertop .header-inner {
+    width: auto;
+  }
+  .headertop .header-inner,
+  .widget-left,
+  .topright {
+    width: auto;
+    padding: 0;
+    float: none;
+  }
+  .topbar-container {
+    float: none;
+  }
+  .container.menuwrapper {
+    background: transparent!important;
+  }
+  #menubar {
+    border-top: 3px solid transparent!important;
+  }
+  #topmenu {
+    float: none;
+  }
+}
+
+@media screen and (min-width:1024px) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+@media(max-width:1024px) {
+	.main-navigation {
+		width: 100%;
+	}
+
+	.main-navigation button.menu-toggle {
+		width: 40px;
+		text-align: center;
+		margin:0 auto;
+		background: transparent;
+		border: 0;
+		color: #ffffff;
+		padding: 10px;
+		height: 40px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.main-navigation button.menu-toggle span.nav-icon {
+		float: right;
+		background: #fff;
+		color: #000;
+		height: 43px;
+		width: 45px;
+		line-height: 43px;
+		text-align: center;
+		position: absolute;
+		right: 20px;
+		top: 11px;
+		border: 1px solid;
+	}
+
+	#primary-menu ul.nav-menu {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+		background: #ffffff;
+		z-index: 99;
+		margin-top: 5px;
+	}
+
+	.main-navigation button.menu-toggle span.nav-icon:hover {
+		background: #6abe52;
+		color: #ffffff;
+		cursor: pointer;
+	}
+
+	.main-navigation.toggled ul li {
+		text-align: left;
+		line-height: 37px;
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+
+	.main-navigation.toggled ul ul,
+	.main-navigation.toggled ul ul ul {
+		position: relative;
+		width: 100%;
+		float: left;
+		display: block;
+		opacity: 0;
+		left: 0;
+		height: 0;
+		box-shadow: none;
+	}
+
+	.main-navigation ul ul ul {
+		right: 0;
+		opacity: 0;
+		left: 0;
+	}
+
+	.main-navigation.toggled ul li:hover ul,
+	.main-navigation.toggled ul li:focus ul,
+	.main-navigation.toggled ul li.focus ul {
+		display: block;
+		opacity: 1;
+		height: auto;
+	}
+
+	.main-navigation.toggled ul li:hover ul ul,
+	.main-navigation.toggled ul li:focus ul ul,
+	.main-navigation.toggled ul li.focus ul ul {
+		display: block;
+		opacity: 0;
+		height: 0;
+		box-shadow: none;
+	}
+
+	.main-navigation.toggled ul  ul li:hover ul,
+	.main-navigation.toggled ul  ul  li:focus ul,
+	.main-navigation.toggled ul  ul li.focus ul {
+		display: block;
+		opacity: 1;
+		left: 0;
+		height: auto;
+		box-shadow: none;
+	}
+
+	.main-navigation.toggled ul li a {
+		padding: 2px 15px;
+	}
+	.main-navigation ul ul li.menu-item-has-children > a:after {
+		content: "\f347";
+		font-family: dashicons;
+	}
+	.main-navigation ul ul li a{color:#0083e1;}
+}
+
+@media screen and (max-width: 29.938em) {
+	.footer-social{
+		padding: 0 0 25px 0;
+		float:left;
+		text-align:left;
+	}	
+	.footer-logo{
+		float:none;
+		text-align:center;
+		padding:25px 0;
+	}
+	#footermenu{
+		margin-top:0px;
+	}
+	#footermenu li{
+		display:block;
+		padding:10px 0;
+	}
+	.skt-insurance-welcome-rating-acolumn{
+		margin-left:10px;
+	}
+}
+
+@media screen and (max-width:63.938em) and (min-width:48.000em) {	 	
+	#footermenu li{
+		padding:5px 15px;
+	}
+	.copyright-txt{
+		padding:25px 0;
+	}
+}
+
+@media(min-width: 1024px) and (max-width: 1199px){
+	.skt-insurance-relax-resort-img.elementor-widget-image .elementor-widget-container img {
+		height: 850px;
+		object-fit: cover;
+	}	
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+	.skt-insurance-relax-resort-img.elementor-widget-image .elementor-widget-container img {
+		height: 600px;
+		object-fit: cover;
+	}
+	.skt-insurance-welcome-rating-column .elementor-container{
+		margin:0 auto !important;
+	}
+	.skt-insurance-amenities-icon .elementor-widget-container {
+		height: 100px;
+		line-height: 100px;
+	}
+	.skt-insurance-enjoy-holiday-section{
+		height:100%;
+	}
+	.skt-insurance-holiday-video-section {
+		height:100%;
+	}
+}
+
+
+@media screen and (max-width: 29.938em) {
+.skt-insurance-section2 .skt-blocks-advanced-column-child:nth-child(2) .responsive-heading-title-text{ margin:0 auto;}
+.skt-insurance-experience-box .responsive-section-wrap .responsive-heading-desc-text {margin-top:-15px;}
+.skt-services-row .skt-services-column{ margin-bottom:15px !important;}
+.skt-insurance-services-box .wp-block-image{text-align:center; margin:5px;}
+.skt-insurance-section4-left .wp-block-spacer {height:20px !important;}
+.skt-insurance-section4-left .wp-block-button__link {padding:20px 35px !important;}
+.skt-insurance-section4-left .section-btn{ width:auto !important;}
+.skt-insurance-section4-right .responsive-section-wrap::before {height:310px; width:310px;}
+.skt-insurance-section4-right .responsive-section-wrap::after {height:260px; width:260px; left:35px; top:145px;}
+.responsive-heading-desc-text{ line-height:28px !important;}
+.logo img{margin-top:20px !important;}
+#simple-menu{ margin-top:5px;}
+.skt-insurance-experience-box .responsive-section-wrap {bottom:10px;}
+.skt-insurance-experience-box .responsive-section-wrap .responsive-heading-desc-text{margin-left:0px;}
+.skt-insurance-section1-left-content {text-align:center;}
+.skt-insurance-section1-left .wp-block-buttons{display: inherit !important; text-align:center;}
+.wpcf7-submit{ margin-top:0px;}	
+}
+
+@media screen and (max-width:47.938em) and (min-width:30.000em) {
+.skt-insurance-section2 .skt-blocks-advanced-column-child:nth-child(2) .responsive-heading-title-text{ margin:0 auto;}
+.skt-insurance-section2 .skt-blocks-advanced-column-child:nth-child(2) .responsive-heading-title-text{ margin:0 auto;}
+.skt-insurance-experience-box .responsive-section-wrap .responsive-heading-desc-text {margin-top:-15px;}
+.skt-services-row .skt-services-column{ margin-bottom:15px !important;}
+.skt-insurance-services-box .wp-block-image{text-align:center; margin:5px;}
+.skt-insurance-section4-left .wp-block-spacer {height:20px !important;}
+.skt-insurance-section4-left .wp-block-button__link {padding:20px 35px !important;}
+.skt-insurance-section4-left .section-btn{ width:auto !important;}
+.skt-insurance-section4-right .responsive-section-wrap::before {height:420px; width:420px; left:0; right:0px; margin:0 auto;}
+.skt-insurance-section4-right .responsive-section-wrap::after {height:360px; width:360px; left:35px; top:150px; left:0; right:0px; margin:0 auto;}
+.skt-insurance-section2-left {width:50% !important;}
+.skt-insurance-experience-box .responsive-section-wrap{right:100px; bottom:0px;}
+#simple-menu{margin-bottom:10px;}
+}
+
+@media screen and (max-width:63.938em) and (min-width:48.000em) {
+.skt-insurance-section2 .skt-blocks-advanced-column-child:nth-child(2) .responsive-heading-title-text{width:45px; height:45px;}
+.skt-insurance-section1-right-box2 .wp-block-spacer, .skt-insurance-section1-right-box .wp-block-spacer {display:none;}
+.skt-insurance-experience-box .responsive-section-wrap {width:35% !important;}
+.skt-insurance-experience-box .responsive-heading-title-text{line-height:normal !important; height:auto !important; width:auto !important;}
+.skt-insurance-services-box .wp-block-image {margin-right:15px !important;}
+.skt-insurance-services-box .skt-blocks-block-section {min-height:220px;}
+.skt-insurance-section4-left .skt-blocks-icon-list__label {font-size:16px !important;}
+.skt-insurance-section4-left .wp-block-button{ width: auto !important;}
+.skt-insurance-section4-right .responsive-section-wrap::before {height:360px; width:360px;}
+.skt-insurance-section4-right .responsive-section-wrap::after {height:300px; width:300px;}
+.skt-insurance-section4 .skt-blocks-advanced-column-child:nth-child(4) {display:none;}
+.skt-insurance-section4 .skt-blocks-advanced-column-child:nth-child(2) { width:50% !important;}
+.skt-insurance-section4 .skt-blocks-advanced-column-child:nth-child(3) {width:50% !important;}
+}
+
+@media screen and (max-width:72.438em) and (min-width:63.250em) {
+.skt-insurance-section1-left .responsive-heading-desc-text{font-size:34px !important;}
+.skt-insurance-section4-right .responsive-section-wrap::before {height:480px; width:480px;}
+.skt-insurance-section4-right .responsive-section-wrap::after {height:410px; width:410px;}
+.skt-insurance-section4 .skt-blocks-advanced-column-child:nth-child(4) {display:none;}
+.skt-insurance-section4 .skt-blocks-advanced-column-child:nth-child(2) { width:50% !important; padding-right:50px;}
+.skt-insurance-section4 .skt-blocks-advanced-column-child:nth-child(3) {width:50% !important;}
+.skt-header-extras .skt-header-button a{padding:26px 0 26px 50px;}
+#topmenu ul li a{padding:37px 16px;}
+.skt-insurance-section2 img {width:92%;}	
+}

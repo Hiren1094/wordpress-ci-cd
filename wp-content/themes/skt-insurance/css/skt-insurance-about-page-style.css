@@ -1,0 +1,7 @@
+.col-left-area{font-size:16px; font-weight:bold; padding-bottom:5px; border-bottom:1px solid #ccc;}
+.centerbold{text-align:center; font-weight:bold;}
+.space5{height:5px}
+@media screen and (min-width: 800px) {
+.col-left {float:left; width: 65%; padding: 1%;}
+.col-right {float:right; width: 30%; padding:1%; border-left:1px solid #DDDDDD;}
+}

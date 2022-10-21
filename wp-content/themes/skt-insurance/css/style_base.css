@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+/* ----------------------------- CUSTOM BUTTON STYLES ----------------------------- */
+img{max-width:100%;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+/* ------------------ default styles ------------------ */
+.breadcrumbs{padding:10px 0; margin-bottom:0;}
+ol.commentlist{list-style:none;}
+#commentform p{margin:5px 0;}
+#commentform label{display:block;}
+#commentform input#email, #commentform input#url, #commentform input#author, #commentform textarea, #commentform input#eazycfc_captcha{max-width:96%; border:1px #ccc solid; padding:5px 2%;}
+
+#commentform input#submit{ background-color:#32373a; border:none; padding:8px 15px; color:#fff; display:inline-block; cursor:pointer;}
+#commentform input#submit:hover{background:#000000; border-bottom-color:#ccc; color:#fff;}
+.form-allowed-tags{display:none;}
+ul.errormsg{background:#ffe4e4;}
+ul.errormsg li{padding:5px;}
+.entry-content table, .comment-body table{ border-collapse:collapse; margin:10px 0;}
+.entry-content table td, .entry-content table th, .comment-body table td, .comment-body table th{padding:10px 5px; text-align:left;}
+.entry-content table th, .comment-body table th{color:#676767; font:normal 18px; border-bottom:1px #888 solid;}
+.entry-content table td, .comment-body table td{border-bottom:1px #ccc solid;}
+.fvch-codeblock:hover .comment-form-url{display:block !important;}
+
+/*------------------------------------------- COMMENT STYLES -------------------------------------------*/
+.commentlist, ol.commentlist {list-style:none; box-shadow:0 0 5px #666; -moz-box-shadow:0 0 5px #666; -webkit-box-shadow:0 0 5px #666; -khtml-box-shadow:0 0 5px #666; margin:10px 0; background-color:#fff; padding:10px 0;}
+.commentlist li, ol.commentlist li { list-style:none; background-image:none !important; padding:0px 15px;}
+.commentlist li ol li.depth-2, .commentlist li ol li.depth-3, .commentlist li ol li.depth-4, ol.commentlist li ol li.depth-2, ol.commentlist li ol li.depth-3, ol.commentlist li ol li.depth-4 { border-bottom:none;}
+.commentlist li.bypostauthor article, ol.commentlist li.bypostauthor article { background:#f9ffe1;}
+.commentlist article, .commentlist li.bypostauthor li article, ol.commentlist li.bypostauthor li article { border:none !important; padding:10px; position:relative; background-color:#fff;}
+.commentlist li .fn { font-weight:normal; font-size:15px; font-style:normal;}
+.commentlist li.bypostauthor .fn, ol.commentlist li.bypostauthor .fn { color:#000;}
+img.avatar { vertical-align:middle; position:static; display:inline-block;}
+.commentlist article a time { display:block; clear:both; padding:5px 0 10px; font-size:11px; font-style:italic;}
+.commentlist, ol.commentlist p { font-size:14px;}
+.commentlist .reply span, ol.commentlist .reply span { display:none;}
+.commentlist .reply a, ol.commentlist .reply a { display:block;	padding:10px; text-align:center; background:#f6f6f6; margin:5px 0; border:1px #ddd solid;}
+.comment-author.vcard{display:inline-block; margin-right:15px; float:left;}
+.comment-list ul.children li.comment{background-image:none; padding-left:5px;}
