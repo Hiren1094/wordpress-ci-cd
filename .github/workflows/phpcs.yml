@@ -1,45 +1,28 @@
-name: Coding Standards
+name: "CI"
 
 on:
-  # JSHint was introduced in WordPress 3.8.
-  # PHPCS checking was introduced in WordPress 5.1.
   pull_request:
     paths:
-      # Any change to a PHP or JavaScript file should run checks.
-      - '**.php'
-      - 'phpcs.xml'
-      # Changes to workflow files should always verify all workflows are successful.
-      - '.github/workflows/*.yml'
+      - "**.php"
+      - "phpcs.xml"
+      - ".github/workflows/phpcs.yml"
+
 jobs:
-  # Runs PHP coding standards checks.
-  #
-  # Violations are reported inline with annotations.
-  #
-  # Performs the following steps:
-  # - Checks out the repository.
-  # - Sets up PHP.
-  # - Logs debug information.
-  # - Configures caching for PHPCS scans.
-  # - Installs Composer dependencies (use cache if possible).
-  # - Make Composer packages available globally.
-  # - Logs PHP_CodeSniffer debug information.
-  # - Runs PHPCS on the full codebase with warnings suppressed.
-  # - Runs PHPCS on the `tests` directory without warnings suppressed.
-  # - Ensures version-controlled files are not modified or deleted.
   phpcs:
-    name: PHP coding standards
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
+      - uses: actions/checkout@v2
         with:
-          php-version: '7.4'
-          coverage: none
-          tools: composer, cs2pr, phpcs
-      - name: Log debug information
+          fetch-depth: 0 # important!
+
+      # we may use whatever way to install phpcs, just specify the path on the next step
+      # however, curl seems to be the fastest
+      - name: Install PHP_CodeSniffer
         run: |
-          php --version
-          composer --version
-      - name: Log PHPCS debug information
-        run: phpcs -i
+          curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+          php phpcs.phar --version
+
+      - uses: thenabeel/action-phpcs@v8
+        with:
+          phpcs_path: php phpcs.phar
+          standard: phpcs.xml
