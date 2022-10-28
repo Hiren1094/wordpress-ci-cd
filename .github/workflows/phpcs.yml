@@ -36,6 +36,10 @@ jobs:
         with:
           php-version: '7.4'
           coverage: none
-          tools: cs2pr, phpcs
-      - name: Run phpcs
-        run: phpcs -q --report=checkstyle src | cs2pr
+          tools: composer, cs2pr, phpcs
+      - name: Log debug information
+        run: |
+          php --version
+          composer --version
+      - name: Log PHPCS debug information
+        run: phpcs -i
