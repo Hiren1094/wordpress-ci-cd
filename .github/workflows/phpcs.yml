@@ -1,28 +1,20 @@
 name: "CI"
 
-on:
-  pull_request:
-    paths:
-      - "**.php"
-      - "phpcs.xml"
-      - ".github/workflows/phpcs.yml"
+on: pull_request
 
+name: Inspections
 jobs:
-  phpcs:
+  runPHPCSInspection:
+    name: Run PHPCS inspection
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # important!
-
-      # we may use whatever way to install phpcs, just specify the path on the next step
-      # however, curl seems to be the fastest
-      - name: Install PHP_CodeSniffer
-        run: |
-          curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-          php phpcs.phar --version
-
-      - uses: thenabeel/action-phpcs@v8
-        with:
-          phpcs_path: php phpcs.phar
-          standard: phpcs.xml
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+    - name: Run PHPCS inspection
+      uses: rtCamp/action-phpcs-code-review@v2
+      env:
+        GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
+        SKIP_FOLDERS: "tests,.github"
+      with:
+        args: "WordPress,WordPress-Core,WordPress-Docs"
