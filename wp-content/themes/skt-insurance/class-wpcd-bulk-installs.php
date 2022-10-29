@@ -105,7 +105,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 
 		$screen = get_current_screen();
 
-		if ( $screen->id !== 'wpcd_app_server_page_wpcd_bulk_installs' ) {
+		if ( 'wpcd_app_server_page_wpcd_bulk_installs' !== $screen->id ) {
 
 			return;
 		}
@@ -140,7 +140,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 
 		if ( ! wpcd_is_admin() ) {
 
-			wp_die( __( 'You do not have sufficient permissions to access this page.', 'wpcd' ) );
+			wp_die( esc_html( __( 'You do not have sufficient permissions to access this page.', 'wpcd' ) ) );
 		}
 
 		// Server Fields.
@@ -388,7 +388,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 				$bulk_installs_value = isset( $generate_fileds['value'] ) ? $generate_fileds['value'] : '';
 				$bulk_installs_html  = isset( $generate_fileds['html'] ) ? $generate_fileds['html'] : '';
 
-				if ( $bulk_installs_id == 'wpcd_bulk_installs_email_notification' || $bulk_installs_id == 'wpcd_bulk_installs_wp_email_notification' ) {
+				if ( 'wpcd_bulk_installs_email_notification' == $bulk_installs_id || 'wpcd_bulk_installs_wp_email_notification' == $bulk_installs_id ) {
 
 					$wpcd_extra_div_cls      = ' wpcd-blk-instl-email-ntf-div';
 					$wpcd_extra_lbl_wrap_cls = ' wpcd-blk-instl-email-ntf-lbl';
@@ -484,7 +484,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 
 		$wpcd_bulk_installs .= '</div>';
 
-		echo $wpcd_bulk_installs;
+		echo $wpcd_bulk_installs; // phpcs:ignore
 
 	}
 
@@ -495,7 +495,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 
 		check_ajax_referer( 'wpcd-bulk-installs', 'security' );
 
-		$wpcd_bulk_installs_params = ! empty( $_POST['params'] ) ? array_map( 'wp_unslash', wp_parse_args( $_POST['params'] ) ) : '';
+		$wpcd_bulk_installs_params = ! empty( $_POST['params'] ) ? array_map( 'wp_unslash', wp_parse_args( $_POST['params'] ) ) : ''; // phpcs:ignore
 
 		$wpcd_bulk_installs_error = '';
 		$wpcd_bulk_installs_sucs  = '';
@@ -546,7 +546,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 						$author_email         = $get_user_by_id->user_email;
 					}
 					// Admin notification.
-					if ( $wpcd_bulk_installs_email_notification != 'yes' ) {
+					if ( 'yes' != $wpcd_bulk_installs_email_notification ) {
 						$wpcd_bulk_installs_email_notification = 'no';
 					}
 					// handle optional server type.
@@ -634,7 +634,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 
 		check_ajax_referer( 'wpcd-bulk-installs', 'security' );
 
-		$wpcd_bulk_installs_params = ! empty( $_POST['params'] ) ? array_map( 'wp_unslash', wp_parse_args( $_POST['params'] ) ) : '';
+		$wpcd_bulk_installs_params = ! empty( $_POST['params'] ) ? array_map( 'wp_unslash', wp_parse_args( $_POST['params'] ) ) : ''; // phpcs:ignore
 
 		$wpcd_bulk_installs_error = '';
 		$wpcd_bulk_installs_sucs  = '';
@@ -693,7 +693,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 						$wpcd_bulk_installs_wp_lang = 'en_US';
 					}
 
-					if ( $wpcd_bulk_installs_email_notify != 'yes' ) {
+					if ( 'yes' !== $wpcd_bulk_installs_email_notify ) {
 
 						$wpcd_bulk_installs_email_notify = 'no';
 					}
@@ -894,7 +894,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 
 		if ( ! empty( $exist_domain_list ) ) {
 			$domain_list = implode( ',', $exist_domain_list );
-			return __( 'These (' . $domain_list . ') domains already exists in our system.', 'wpcd' );
+			return sprintf( __('These %s domains already exists in our system.', 'wpcd'), $domain_list );  // phpcs:ignore
 		}
 		return false;
 	}
@@ -972,7 +972,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 			WPCD_POSTS_PENDING_TASKS_LOG()->update_task_by_id( $pending_task_posts[0]->ID, $data_to_save, 'complete' );
 			$wp_app_notify = get_post_meta( $app_id, 'wpapp_bulk_installs_admin_notify', true );
 
-			if ( $wp_app_notify == 'yes' ) {
+			if ( 'yes' == $wp_app_notify ) {
 
 				if ( ! empty( $data_to_save ) ) {
 					$server_id             = get_post_meta( $app_id, 'parent_post_id', true );
