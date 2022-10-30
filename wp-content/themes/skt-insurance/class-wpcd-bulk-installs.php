@@ -484,7 +484,7 @@ class WPCD_BULK_INSTALLS extends WPCD_APP {
 
 		$wpcd_bulk_installs .= '</div>';
 
-		echo $wpcd_bulk_installs;
+		echo $wpcd_bulk_installs; // phpcs:ignore
 
 	}
 
