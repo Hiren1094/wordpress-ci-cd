@@ -2,7 +2,7 @@
 /**
  * This class handles for Bulk Installs.
  *
- * @package wpcd Test
+ * @package wpcd
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
